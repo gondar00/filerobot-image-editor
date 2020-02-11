@@ -4,7 +4,7 @@ import { Container } from './styledComponents';
 import { ThemeProvider } from 'styled-components';
 import { Modal } from './components/Modal';
 import { UPLOADER } from './config';
-import './assets/fonts/filerobot-font.css';
+// import './assets/fonts/filerobot-font.css';
 import translations from './assets/i18n';
 import dark from './assets/theme/dark';
 import light from './assets/theme/light';
