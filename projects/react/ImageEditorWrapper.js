@@ -9,18 +9,21 @@ import translations from './assets/i18n';
 import dark from './assets/theme/dark';
 import light from './assets/theme/light';
 
+// overriding defaults 
+// default: ['adjust', 'effects', 'filters', 'rotate', 'crop', 'resize', 'watermark']
+const defaultTools = ['rotate', 'crop', 'resize']
 
 class ImageEditorWrapper extends Component {
   constructor({ show = false, src = '', config = {} }) {
     super();
-
+    config.tools = config.tools || defaultTools;
     config.translations = config.translations || {};
     config.language = translations[config.language] ? config.language : 'en';
     config.theme = config.theme || {};
     config.theme.colors = config.theme.colors || {};
     config.theme.fonts = config.theme.fonts || {};
-    config.colorScheme = config.colorScheme || 'dark';
-    config.platform = config.platform || 'filerobot';
+    config.colorScheme = config.colorScheme || 'light';
+    config.platform = config.platform || 'btt';
 
     this.state = {
       isVisible: show,

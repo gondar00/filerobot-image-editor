@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import { getIconStyles, getIconByName } from './styleUtils';
-
+import styled from 'styled-components'
+import { getIconStyles, getIconByName } from './styleUtils'
 
 const Toolbar = styled.div`
   height: 100px;
@@ -19,7 +18,7 @@ const Toolbar = styled.div`
     background: #3b4d54;
     border-radius: 5px;
   }
-`;
+`
 
 const ToolWrapper = styled.div`
   padding: 20px 10px;
@@ -37,7 +36,7 @@ const ToolWrapper = styled.div`
     color: ${props => props.theme.colors.textHover};
     background: ${props => props.theme.colors.secondaryBg};
   }
-`;
+`
 
 const ToolIcon = styled.div`
   height: 40px;
@@ -45,12 +44,12 @@ const ToolIcon = styled.div`
   
   ${props => getIconStyles(props)}
   ${props => getIconByName(props.name)}
-`;
+`
 
 const ToolLabel = styled.div`
   height: 20px;
   line-height: 20px;
-`;
+`
 
 const EffectsWrapper = styled.div`
   overflow-x: auto;
@@ -65,7 +64,7 @@ const EffectsWrapper = styled.div`
     background: #3b4d54;
     border-radius: 5px;
   }
-`;
+`
 
 const EffectWrapper = styled.div`
   display: inline-block;
@@ -82,7 +81,7 @@ const EffectWrapper = styled.div`
   :hover {
     background: ${p => p.theme.colors.secondaryBgHover};
   }
-`;
+`
 
 const EffectIcon = styled.div`
   background: url('${props => props.src}') 50% 50% / cover no-repeat;
@@ -91,14 +90,14 @@ const EffectIcon = styled.div`
   border-radius: 2px;
   overflow: hidden;
   display: inline-block;
-`;
+`
 
 const EffectLabel = styled.div`
   text-transform: capitalize;
   height: 20px;
   line-height: 20px;
-`;
+`
 
 export {
   Toolbar, ToolWrapper, ToolIcon, ToolLabel, EffectsWrapper, EffectWrapper, EffectIcon, EffectLabel
-};
+}

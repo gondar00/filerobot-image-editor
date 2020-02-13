@@ -305,7 +305,6 @@ export default class extends Component {
       cropDetails, original, canvasDimensions, processWithCloudimage, processWithFilerobot, uploadCloudimageImage,
       imageMime, lastOperation, operationList, initialZoom, canvasZoomed, canvasOriginal, reduceBeforeEdit,
       cropBeforeEdit, img, imageName, activeBody, isPreResize, preCanvasDimensions, logoImage,
-
       effect,
       filter,
       crop,
@@ -354,7 +353,6 @@ export default class extends Component {
       onAdjust: this.onAdjust,
       onDownloadImage: this.onDownloadImage,
       handleSave: this.handleSave,
-
       ...imageParams,
       watermark
     };
@@ -419,17 +417,13 @@ export default class extends Component {
 
     return (
       <Wrapper>
-
         <Header {...headerProps}/>
-
         <PreviewWrapper>
           {activeBody === 'preview' && <Preview {...previewProps}/>}
           {activeBody === 'preResize' && <PreResize {...previewProps}/>}
-
           <Spinner overlay show={isShowSpinner} label={t['spinner.label']}/>
         </PreviewWrapper>
         <Footer {...footerProps}/>
-
       </Wrapper>
     )
   }
