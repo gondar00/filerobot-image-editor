@@ -53,6 +53,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// overriding defaults 
+// default: ['adjust', 'effects', 'filters', 'rotate', 'crop', 'resize', 'watermark']
+var defaultTools = ['rotate', 'crop', 'resize'];
+
 var ImageEditorWrapper =
 /*#__PURE__*/
 function (_Component) {
@@ -96,13 +100,14 @@ function (_Component) {
       });
     });
 
+    _config.tools = _config.tools || defaultTools;
     _config.translations = _config.translations || {};
     _config.language = _i18n.default[_config.language] ? _config.language : 'en';
     _config.theme = _config.theme || {};
     _config.theme.colors = _config.theme.colors || {};
     _config.theme.fonts = _config.theme.fonts || {};
-    _config.colorScheme = _config.colorScheme || 'dark';
-    _config.platform = _config.platform || 'filerobot';
+    _config.colorScheme = _config.colorScheme || 'light';
+    _config.platform = _config.platform || 'btt';
     _this.state = {
       isVisible: show,
       src: _src,
@@ -182,6 +187,8 @@ var _temp = function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
   }
+
+  __REACT_HOT_LOADER__.register(defaultTools, "defaultTools", "/Users/gandharv/image-editor/filerobot-image-editor/projects/react/ImageEditorWrapper.js");
 
   __REACT_HOT_LOADER__.register(ImageEditorWrapper, "ImageEditorWrapper", "/Users/gandharv/image-editor/filerobot-image-editor/projects/react/ImageEditorWrapper.js");
 

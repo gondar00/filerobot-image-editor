@@ -53,14 +53,12 @@ function (_Component) {
           apply = _this$props.apply,
           onClose = _this$props.onClose,
           showGoBackBtn = _this$props.showGoBackBtn,
-          processWithFilerobot = _this$props.processWithFilerobot,
-          processWithCloudimage = _this$props.processWithCloudimage,
           handleSave = _this$props.handleSave,
           activeBody = _this$props.activeBody,
           t = _this$props.t;
       var filteredName = activeTab === 'rotate' ? 'orientation' : activeTab;
-      var onFinishButtonLabel = !processWithFilerobot && !processWithCloudimage ? t['toolbar.download'] : t['toolbar.save'];
-      return _react.default.createElement(_styledComponents.HeaderWrapper, null, _react.default.createElement(_styledComponents.HeaderTop, null, _react.default.createElement(_styledComponents.Title, null, t["toolbar.".concat(filteredName)] || t["header.image_editor_title"]), _react.default.createElement(_styledComponents.CloseBtn, {
+      var onFinishButtonLabel = t['toolbar.save'];
+      return _react.default.createElement(_styledComponents.HeaderWrapper, null, _react.default.createElement(_styledComponents.HeaderTop, null, _react.default.createElement(_styledComponents.Title, null, t["toolbar.".concat(filteredName)] || t['header.image_editor_title']), _react.default.createElement(_styledComponents.CloseBtn, {
         onClick: onClose
       })), _react.default.createElement(_styledComponents.ToolbarWrapper, null, _react.default.createElement(_styledComponents.LeftActions, null, _react.default.createElement(_styledComponents.CancelBtn, {
         hide: !activeTab,
@@ -70,15 +68,15 @@ function (_Component) {
         sm: true,
         default: true,
         fullSize: true
-      }, t["toolbar.cancel"]), showGoBackBtn && _react.default.createElement(_styledComponents.CancelBtn, {
+      }, t['toolbar.cancel']), showGoBackBtn && _react.default.createElement(_styledComponents.CancelBtn, {
         hide: activeTab,
         onClick: onClose,
         sm: true,
         default: true,
         fullSize: true
-      }, t["toolbar.go_back"])), _react.default.createElement(_.Toolbar, this.props), activeBody === 'preview' && _react.default.createElement(_styledComponents.RightActions, null, _react.default.createElement(_styledComponents.Button, {
+      }, t['toolbar.go_back'])), _react.default.createElement(_.Toolbar, this.props), activeBody === 'preview' && _react.default.createElement(_styledComponents.RightActions, null, _react.default.createElement(_styledComponents.Button, {
         themeColor: true,
-        sm: true //disabled={!activeTab}
+        sm: true // disabled={!activeTab}
         ,
         success: !activeTab || activeTab === 'resize',
         themeBtn: activeTab,
